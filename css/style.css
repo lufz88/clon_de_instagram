@@ -1,3 +1,10 @@
+:root {
+	--gray-color: gray;
+	--blue-color: #3851a4;
+}
+
+/* Reset values*/
+
 * {
 	padding: 0;
 	margin: 0;
@@ -15,4 +22,81 @@ body {
 
 ul {
 	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Main styles */
+
+.main--login {
+	width: 90%;
+	margin: 28px auto 0 auto;
+}
+
+.main--login .main--title {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.main--login .main--title h1 {
+	font-size: 3.4rem;
+}
+
+/* Form styles*/
+
+.login--form {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.login--form .form--input {
+	width: 100%;
+	padding: 10px;
+	margin: 10px 0;
+	border: 1px solid var(--gray-color);
+	border-radius: 4px;
+}
+
+.login--form .form--button {
+	display: block;
+	width: 80px;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.divisor {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 20px 0;
+}
+
+.divisor div {
+	width: 45%;
+	height: 1px;
+	background-color: var(--gray-color);
+}
+
+/* Links style */
+
+.alternative--link {
+	color: var(--blue-color);
+	display: block;
+	text-align: center;
+	margin: 15px 0;
+}
+
+.alternative--link__bold {
+	font-weight: 700;
+}
+
+.alternative--link__small {
+	font-size: 1.4rem;
+}
+
+.alternative--paragraph {
+	text-align: center;
+	margin-top: 60px;
 }
