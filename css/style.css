@@ -205,7 +205,7 @@ a {
 	height: 40px;
 	object-fit: cover;
 	border-radius: 5px;
-	margin: 0 0;
+	margin: 0 0 8px;
 }
 
 /*Footer*/
@@ -252,6 +252,7 @@ a {
 
 @media (min-width: 1024px) {
 	.main {
+		margin-top: 24px;
 		justify-content: center;
 		align-items: center;
 	}
