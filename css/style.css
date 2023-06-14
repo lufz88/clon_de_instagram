@@ -31,23 +31,39 @@ a {
 
 /* Main styles */
 
-.main--carrousel {
-	display: none;
+.main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 28px;
 }
 
-.main--login {
-	width: 90%;
-	max-width: 370px;
-	margin: 32px auto 24px auto;
+.main--carrousel {
+	display: none;
 	height: 600px;
 }
 
-.main--login .main--title {
+.main--login-container {
+	width: 90%;
+	max-width: 370px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.login-container--login {
+	width: 100%;
+	margin: 32px auto 10px auto;
+	padding-bottom: 12px;
+}
+
+.login-container--login .login-container--title {
 	margin-bottom: 8px;
 	text-align: center;
 }
 
-.main--title .title--img {
+.login-container--title .title--img {
 	width: 180px;
 	height: auto;
 }
@@ -149,25 +165,28 @@ a {
 	color: var(--blue-color);
 }
 
-.alternative--link__light-blue {
+.alternative--link__light-blue,
+.register--link__light-blue {
 	font-weight: 700;
 	color: var(--buttons-color);
 }
 
-.alternative--link__light-blue:visited {
+.alternative--link__light-blue:visited,
+.register--link__light-blue:active {
 	color: var(--buttons-color);
-}
-
-.alternative--paragraph {
-	font-size: 1.4rem;
-	text-align: center;
-	margin-top: 48px;
 }
 
 .links--paragraph {
 	font-size: 1.4rem;
-	margin: 36px 0 16px;
+	margin: 24px 0 16px;
 	text-align: center;
+}
+
+.register {
+	display: flex;
+	justify-content: center;
+	font-size: 1.4rem;
+	max-width: 370px;
 }
 
 /* buttons img*/
@@ -216,7 +235,15 @@ a {
 		background-color: #fafafa;
 	}
 
-	.main--login {
+	.login-container--login {
+		border: 1px solid var(--gray-color);
+		background-color: white;
+		border-radius: 10px;
+	}
+
+	.register {
+		width: 100%;
+		padding: 20px 0;
 		border: 1px solid var(--gray-color);
 		background-color: white;
 		border-radius: 10px;
@@ -225,7 +252,6 @@ a {
 
 @media (min-width: 1024px) {
 	.main {
-		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
@@ -246,10 +272,5 @@ a {
 		position: absolute;
 		right: 20px;
 		top: 24px;
-	}
-
-	.main--login {
-		margin-left: 20px;
-		margin-right: 20px;
 	}
 }
