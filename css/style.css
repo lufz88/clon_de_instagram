@@ -31,23 +31,8 @@ a {
 
 /* Main styles */
 
-.main {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100vw;
-}
-
-.main--cellphone-container {
+.main--carrousel {
 	display: none;
-	height: 100%;
-	width: 370px;
-}
-
-.main--cellphone-container .cellphone-container--img {
-	height: 100%;
-	width: 370px;
-	object-fit: contain;
 }
 
 .main--login {
@@ -231,13 +216,40 @@ a {
 		background-color: #fafafa;
 	}
 
-	.main--cellphone-container {
-		display: flex;
-	}
-
 	.main--login {
 		border: 1px solid var(--gray-color);
 		background-color: white;
 		border-radius: 10px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.main {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.main--carrousel {
+		display: block;
+		position: relative;
+		height: 600px;
+		width: 370px;
+		margin-top: 32px;
+		background-image: url('../img/home-phones-2x.png');
+		background-position: center;
+		background-size: cover;
+	}
+
+	.main--carrousel img {
+		height: 510px;
+		position: absolute;
+		right: 20px;
+		top: 24px;
+	}
+
+	.main--login {
+		margin-left: 20px;
+		margin-right: 20px;
 	}
 }
